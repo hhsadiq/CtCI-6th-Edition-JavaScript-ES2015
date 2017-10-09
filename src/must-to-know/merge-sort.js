@@ -20,10 +20,11 @@ export function mergeSort(arr, order = 'ASC') {
 }
 
 /**
- * Merge two sorted arrays so that resulted array is also sorted
+ * Merge two sorted arrays so that resulted array is also sorted,
  * @param arr1
  * @param arr2
- * @param order ASC | DESC
+ * @param order ASC | DESC (To sort in ASC order, it assumes that given
+ * arrays are in ASC order, same for DESC order)
  * @returns {*}
  */
 export function mergeSortedArrays(arr1, arr2, order = 'ASC') {
