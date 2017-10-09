@@ -1,30 +1,42 @@
 /**
  * Merge sort algorithm
  * @param arr
- * @param leftArrayStart
- * @param leftArrayEnd
- * @param rightArrayStart
- * @param righArrayEnd
+ * @param order ASC | DESC
  * @returns {*}
  */
-export function mergeSort(arr,
-                          leftArrayStart = 0,
-                          leftArrayEnd = Math.floor((arr.length) / 2),
-                          rightArrayStart = Math.floor((arr.length) / 2) + 1,
-                          righArrayEnd = arr.length - 1) {
-  if (arr.length === 1) {
-    return arr[0];
+export function mergeSort(arr, order = 'ASC') {
+  if (arr.length < 1) {
+    return [];
   }
-  sort(mergeSort());
+  if (arr.length === 1) {
+    return arr;
+  }
+  const leftArray = arr.slice(0, Math.floor((arr.length) / 2));
+  const rightArray = arr.slice(Math.floor((arr.length) / 2), arr.length);
+  return mergeSortedArrays(
+    mergeSort(leftArray, order),
+    mergeSort(rightArray, order),
+    order);
 }
 
-export function mergeSortedArrays(arr1, arr2) {
-  if (!Array.isArray(arr1)|| !Array.isArray(arr2)) {
+/**
+ * Merge two sorted arrays so that resulted array is also sorted
+ * @param arr1
+ * @param arr2
+ * @param order ASC | DESC
+ * @returns {*}
+ */
+export function mergeSortedArrays(arr1, arr2, order = 'ASC') {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
     return 'invalid input';
   }
   let i = 0, j = 0, k = 0, arr3 = [];
-  while ( i < arr1.length && j < arr2.length) {
-    if (arr1[i] <= arr2[j]) {
+  while (i < arr1.length && j < arr2.length) {
+    const condition = {
+      'ASC': arr1[i] <= arr2[j],
+      'DESC': arr1[i] > arr2[j]
+    };
+    if (condition[order.toUpperCase()]) {
       arr3[k++] = arr1[i++];
     } else {
       arr3[k++] = arr2[j++];
