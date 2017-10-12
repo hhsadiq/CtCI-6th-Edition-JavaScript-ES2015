@@ -62,7 +62,7 @@ describe('sort the given array around pivot', () => {
   ].forEach(context => {
     it(
       `Sorting the array ${context.arr} around pivot ${context.pivot} in ${context.order || 'ASC'} order`, () => {
-        expect(sortAroundPivot(context.arr, context.pivot, context.order))
+        expect(sortAroundPivot(context.arr, context.pivot, context.order).array)
           .to
           .eql(context.expected);
       });
