@@ -9,7 +9,7 @@ export class Tree {
   breadthFirstSearch(callback) {
     const q = new Queue();
     callback(this.value);
-    this.children.forEach((value) => q.enqueue(value));
+    this.children.forEach((node) => q.enqueue(node));
     while (!q.isEmpty()) {
       const node = q.dequeue();
       callback(node.value);
