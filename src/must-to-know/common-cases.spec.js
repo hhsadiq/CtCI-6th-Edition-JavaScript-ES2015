@@ -61,7 +61,7 @@ export const sortingCases = [
   }
 ];
 
-export const tree = {
+export const sampleTree = {
   value: 1,
   children: [
     {
