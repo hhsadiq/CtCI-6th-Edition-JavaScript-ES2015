@@ -57,6 +57,6 @@ export class Queue {
    * @returns {boolean}
    */
   isEmpty() {
-    return this.length > 1;
+    return this.length < 1;
   }
 }

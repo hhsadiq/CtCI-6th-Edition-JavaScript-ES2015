@@ -5,13 +5,13 @@ import {
 import { sampleTree } from './common-cases.spec';
 
 describe('tree', function () {
-  it('should correctly generate a sampleTree', () => {
+  it('Generate the tree', () => {
     expect(new Tree(sampleTree.value, sampleTree.children))
       .to
       .eql(sampleTree);
   });
 
-  it('should allow correct breadth first search', () => {
+  it('Breadth first search', () => {
     const myTree = new Tree(sampleTree.value, sampleTree.children);
     const traversalResult = [];
     const BFSIterator = (value) => {
