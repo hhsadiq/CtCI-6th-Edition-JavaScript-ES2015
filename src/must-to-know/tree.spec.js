@@ -17,7 +17,7 @@ describe('tree', function () {
     const BFSIterator = (value) => {
       traversalResult.push(value);
     };
-    myTree.breadthFirstSearch(BFSIterator);
+    myTree.breadthFirstTraversal(BFSIterator);
     expect(traversalResult)
       .to
       .eql([1, 2, 12, 3, 4, 5, 9, 11, 13, 20, 6, 7, 8, 10, 14, 15, 16, 17, 18, 19]);
