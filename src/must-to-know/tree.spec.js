@@ -4,7 +4,7 @@ import {
 } from './tree';
 import { sampleTree } from './common-cases.spec';
 
-describe('sampleTree', function () {
+describe('tree', function () {
   it('should correctly generate a sampleTree', () => {
     expect(new Tree(sampleTree.value, sampleTree.children))
       .to

@@ -1,7 +1,4 @@
 import {Queue} from './queue';
-import {
-  Tree as sampleTree
-} from './tree';
 
 export class Tree {
   constructor(value, children = []) {
@@ -20,11 +17,3 @@ export class Tree {
     }
   }
 }
-
-
-const myTree = new Tree(sampleTree.value, sampleTree.children);
-const traversalResult = [];
-const BFSIterator = (value) => {
-  traversalResult.push(value);
-};
-myTree.breadthFirstSearch(BFSIterator);
