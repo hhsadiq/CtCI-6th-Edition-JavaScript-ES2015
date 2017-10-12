@@ -1,4 +1,4 @@
-module.exports = class Queue {
+export class Queue {
 
   /**
    * Again, our queue is using a JavaScript array as a list rather than memory.
