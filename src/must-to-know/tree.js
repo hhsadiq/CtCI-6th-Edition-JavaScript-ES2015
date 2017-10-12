@@ -13,7 +13,7 @@ export class Tree {
     while (!q.isEmpty()) {
       const node = q.dequeue();
       callback(node.value);
-      node.forEach((value) => q.enqueue(value));
+      node.children.forEach((value) => q.enqueue(value));
     }
   }
 }
