@@ -11,15 +11,25 @@ describe('tree', function () {
       .eql(sampleTree);
   });
 
+  const myTree = new Tree(sampleTree.value, sampleTree.children);
+  let traversalResult = [];
+  const iterator = (value) => {
+    traversalResult.push(value);
+  };
+
   it('Breadth first search', () => {
-    const myTree = new Tree(sampleTree.value, sampleTree.children);
-    const traversalResult = [];
-    const BFSIterator = (value) => {
-      traversalResult.push(value);
-    };
-    myTree.breadthFirstTraversal(BFSIterator);
+    traversalResult = [];
+    myTree.breadthFirstTraversal(iterator);
     expect(traversalResult)
       .to
       .eql([1, 2, 12, 3, 4, 5, 9, 11, 13, 20, 6, 7, 8, 10, 14, 15, 16, 17, 18, 19]);
+  });
+
+  it('Depth first search', () => {
+    traversalResult = [];
+    myTree.depthFirstTraversal(iterator);
+    expect(traversalResult)
+      .to
+      .eql([3, 4, 6, 7, 8, 5, 10, 9, 11, 2, 15, 16, 17, 18, 19, 14, 13, 20, 12, 1]);
   });
 });

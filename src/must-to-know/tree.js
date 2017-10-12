@@ -25,4 +25,20 @@ export class Tree {
       node.children.forEach((value) => q.enqueue(value));
     }
   }
+
+  /**
+   * Breadth first traversal
+   * @param callback
+   */
+  depthFirstTraversal(callback) {
+    const q = new Queue();
+    callback(this.value);
+    this.children.forEach((node) => q.enqueue(node));
+    while (!q.isEmpty()) {
+      const node = q.dequeue();
+      callback(node.value);
+      node.children.forEach((value) => q.enqueue(value));
+    }
+  }
+
 }
