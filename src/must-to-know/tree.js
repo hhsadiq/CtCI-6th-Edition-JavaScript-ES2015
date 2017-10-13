@@ -68,8 +68,8 @@ export class Tree {
    * https://www.pramp.com/challenge/15oxrQx6LjtQj9JK9XqA
    * @returns {*}
    */
-  minimumOfPathSums() {
-    return this._minimumOfPathSumsPrampSolution(this.root);
+  minPath() {
+    return this._minPathPrampSolution(this.root);
   }
 
   /**
@@ -79,7 +79,7 @@ export class Tree {
    * @returns {*}
    * @private
    */
-  _minimumOfPathSums(node, min = [Infinity], parentSum = 0) {
+  _minPath(node, min = [Infinity], parentSum = 0) {
     if (node.children < 1) {
       const pathSum = parentSum + node.value;
       min [0] = pathSum < min[0] ? pathSum : min[0];
@@ -87,7 +87,7 @@ export class Tree {
     }
     parentSum += node.value;
     node.children.forEach(child =>
-      this._minimumOfPathSums(child, min, parentSum));
+      this._minPath(child, min, parentSum));
     return min[0];
   }
 
@@ -96,13 +96,13 @@ export class Tree {
    * @returns {*}
    * @private
    */
-  _minimumOfPathSumsPrampSolution(node) {
+  _minPathPrampSolution(node) {
     if (node.children < 1) {
       return node.value;
     }
     let min = Infinity;
     node.children.forEach(child => {
-      const tempCost = this._minimumOfPathSumsPrampSolution(child);
+      const tempCost = this._minPathPrampSolution(child);
       min = tempCost < min ? tempCost : min;
     });
     return min + node.value;
