@@ -61,7 +61,7 @@ export const sortingCases = [
   }
 ];
 
-export const sampleTree = {
+const sampleTree = {
   value: 1,
   children: [
     {
@@ -161,3 +161,80 @@ export const sampleTree = {
     }
   ]
 };
+const prampSampleTree = {
+  value: 0,
+  children: [
+    {
+      value: 5,
+      children: [
+        {
+          value: 4,
+          children: [
+          ]
+        }
+      ]
+    },
+    {
+      value: 3,
+      children: [
+        {
+          value: 2,
+          children: [
+            {
+              value: 1,
+              children: [
+                {
+                  value: 1,
+                  children: [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          value: 0,
+          children: [
+            {
+              value: 10,
+              children: [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      value: 6,
+      children: [
+        {
+          value: 1,
+          children: [
+          ]
+        },
+        {
+          value: 5,
+          children: [
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+export const treeCases = [
+  {
+    tree: sampleTree,
+    BFT: [1, 2, 12, 3, 4, 5, 9, 11, 13, 20, 6, 7, 8, 10, 14, 15, 16, 17, 18, 19],
+    DFT: [3, 4, 6, 7, 8, 5, 10, 9, 11, 2, 15, 16, 17, 18, 19, 14, 13, 20, 12, 1],
+    sumOfEachPath: [6, 7, 14, 15, 16, 22, 14, 55, 56, 57, 58, 59, 33],
+    minPath: 6
+  },
+  {
+    tree: prampSampleTree,
+    BFT: [0, 5, 3, 6, 4, 2, 0, 1, 5, 1, 10, 1],
+    DFT: [4, 5, 1, 1, 2, 10, 0, 3, 1, 5, 6, 0],
+    sumOfEachPath: [9, 7, 13, 7, 11],
+    minPath: 7
+  }
+];
