@@ -14,7 +14,7 @@ describe('tree', () => {
 
   treeCases.forEach((context, i) => {
     const myTree = new Tree(context.tree);
-    it(`Breadth first search in tree ${i}`, () => {
+    it(`Breadth first traversal in tree ${i}`, () => {
       let traversalResult = [];
       myTree.breadthFirstTraversal(value => traversalResult.push(value));
       expect(traversalResult)
@@ -22,7 +22,7 @@ describe('tree', () => {
         .eql(context.BFT);
     });
 
-    it(`Depth first search in tree ${i}`, () => {
+    it(`Depth first traversal in tree ${i}`, () => {
       let traversalResult = [];
       myTree.depthFirstTraversal(value => traversalResult.push(value));
       expect(traversalResult)
