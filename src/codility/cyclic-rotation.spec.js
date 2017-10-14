@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import {
-  solution1
-} from './test';
+  solution
+} from './cyclic-rotation';
 
 describe('cyclic rotation of array', function () {
 
@@ -47,7 +47,7 @@ describe('cyclic rotation of array', function () {
     }
   ].forEach(context => {
     it(`Rotate Array ${context.A}, ${context.K} times`, function () {
-      expect(solution1(context.A, context.K))
+      expect(solution(context.A, context.K))
         .to
         .eql(context.expected);
     });

@@ -23,7 +23,7 @@
  * @returns {*}
  */
 
-export function solution1(A, K) {
+export function solution(A, K) {
   if (A.length < 1) {
     return [];
   }
