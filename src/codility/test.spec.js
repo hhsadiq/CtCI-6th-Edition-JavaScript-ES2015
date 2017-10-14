@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import {
   solution
-} from './starter';
+} from './test';
 
 describe('codility', function () {
   [
