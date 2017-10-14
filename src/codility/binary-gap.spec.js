@@ -38,7 +38,7 @@ const cases = [
   }
 ];
 
-describe('binary gap ', function () {
+describe('binary gap', function () {
   cases.forEach(context => {
     it(`Input ${context.input}`, function () {
       expect(solution(parseInt(context.input, 2)))

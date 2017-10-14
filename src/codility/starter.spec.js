@@ -3,7 +3,7 @@ import {
   solution
 } from './starter';
 
-describe('codility', function () {
+describe('starter', function () {
   [
     {
       N: 5,

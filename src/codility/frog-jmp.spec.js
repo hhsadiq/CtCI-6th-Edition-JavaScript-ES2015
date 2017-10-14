@@ -3,7 +3,7 @@ import {
   solution
 } from './frog-jmp';
 
-describe('codility tests', function () {
+describe('frog jmp', function () {
   [
     {
       X: 10,
