@@ -222,6 +222,10 @@ const prampSampleTree = {
   ]
 };
 
+/**
+ *
+ * @type {[null,null]}
+ */
 export const treeCases = [
   {
     tree: sampleTree,
