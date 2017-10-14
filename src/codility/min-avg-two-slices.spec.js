@@ -3,7 +3,7 @@ import {
   solution
 } from './min-avg-two-slices';
 
-describe('test', function () {
+describe('min avg of two slices', function () {
   [
     {
       A: [4, 2, 2, 5, 1, 5, 8],
