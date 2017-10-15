@@ -5,7 +5,7 @@ import {
   primality
 } from './lesson-primality-and-divisors';
 
-describe('test', function () {
+describe('primality and divisors', function () {
   [
     {
       N: 12,
