@@ -3,7 +3,7 @@ import {
   solution
 } from './stone-wall';
 
-describe('test', function () {
+describe('stone wall', function () {
   [
     {
       H: [1, 2, 3, 4, 1],
