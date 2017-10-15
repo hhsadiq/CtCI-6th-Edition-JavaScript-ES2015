@@ -3,7 +3,7 @@ import {
   solution
 } from './lesson-seive';
 
-describe('test', function () {
+describe('seive', function () {
   [
     {
       N: 5,
