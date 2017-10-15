@@ -3,7 +3,7 @@ import {
   solution
 } from './number-of-disc-intersections';
 
-describe('test', function () {
+describe('number of disc intersections', function () {
   [
     {
       A: [1, 5, 2, 1, 4, 0],
