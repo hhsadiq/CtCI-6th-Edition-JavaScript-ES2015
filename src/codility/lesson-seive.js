@@ -10,6 +10,5 @@ export function solution(N) {
     nums.push(i);
   }
   // TODO: complete it after test
-  const nSqrt = Math.floor(Math.sqrt(N));
   return [2, 3, 5];
 }

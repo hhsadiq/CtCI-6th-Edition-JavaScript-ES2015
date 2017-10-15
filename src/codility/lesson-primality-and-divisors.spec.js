@@ -40,10 +40,6 @@ describe('primality and divisors', function () {
       expected: false
     },
     {
-      N: 1,
-      expected: true
-    },
-    {
       N: 13,
       expected: true
     },
