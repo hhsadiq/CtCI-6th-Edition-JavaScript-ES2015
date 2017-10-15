@@ -39,6 +39,7 @@ export function divisorsSquareRoot(N) {
  * @returns {boolean}
  */
 export function primality(N) {
+  if (N === 1) return false;
   const nSqrt = Math.floor(Math.sqrt(N));
   for(let i = 2; i <= nSqrt; i++) {
     if (N % i === 0) {
